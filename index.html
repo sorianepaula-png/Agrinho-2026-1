@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes do Amanhã - Painel Oficial Agrinho 2026</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar-container">
+            <div class="brand-wrapper">
+                <div class="brand-avatar">🌾</div>
+                <div>
+                    <h2 class="brand-title">C.E. Ernestina W.</h2>
+                    <span class="brand-subtitle">Antônio Olinto - PR</span>
+                </div>
+            </div>
+            
+            <nav class="nav-list">
+                <button class="nav-btn active" id="btn-tab-painel" onclick="irParaAba('painel')">📊 Painel Inicial</button>
+                <button class="nav-btn" id="btn-tab-agroecologia" onclick="irParaAba('agroecologia')">🌱 Agroecologia</button>
+                <button class="nav-btn" id="btn-tab-licoes" onclick="irParaAba('licoes')">📚 Lições do Campo</button>
+                <button class="nav-btn" id="btn-tab-materiais" onclick="irParaAba('materiais')">📂 Materiais de Apoio</button>
+                <button class="nav-btn" id="btn-tab-desafios" onclick="irParaAba('desafios')">🏆 Desafios Agrinho</button>
+                <button class="nav-btn" id="btn-tab-progresso" onclick="irParaAba('progresso')">📈 Meu Progresso</button>
+            </nav>
+
+            <div class="sidebar-alert-box">
+                <h4 class="alert-box-title">AGRINHO 2026</h4>
+                <p class="alert-box-desc">Sustentabilidade Rústica e Computação.</p>
+                <div class="alert-box-avatars">
+                    <span class="mini-av">🧑‍🌾</span>
+                    <span class="mini-av">👩‍🌾</span>
+                </div>
+                <button class="alert-box-action">Projeto Ativo</button>
+            </div>
+        </aside>
+
+        <main class="main-viewport">
+            <header class="header-viewport">
+                <div class="header-right">
+                    <div class="bell-trigger">🔔<span class="bell-badge">2</span></div>
+                    <div class="profile-badge">🟢 Aluno Online</div>
+                </div>
+            </header>
+
+            <div id="view-painel" class="view-pane active">
+                <section class="banner-hero">
+                    <div class="banner-core">
+                        <h1 class="banner-heading">Raízes do Amanhã</h1>
+                        <h3 class="banner-subheading">C. E. ERNESTINA W. DA SILVEIRA | ANTÔNIO OLINTO - PR</h3>
+                        <div class="banner-highlight">
+                            <p>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente.</p>
+                        </div>
+                        <p class="banner-paragraph">No interior de Antônio Olinto, a agricultura familiar impulsiona a nossa comunidade. Nós, estudantes do Ensino Médio, desenvolvemos este painel para avaliar e sugerir melhorias sustentáveis baseadas nas diretrizes ambientais.</p>
+                    </div>
+                    <div class="banner-tags">
+                        <span class="tag-pill">🌾 Produção Consciente</span>
+                        <span class="tag-pill">🌧️ Meio Ambiente Preservado</span>
+                        <span class="tag-pill">👥 Comunidade Fortalecida</span>
+                        <span class="tag-pill">⏳ Futuro Sustentável</span>
+                    </div>
+                </section>
+
+                <div class="grid-dashboard">
+                    <section class="card-base">
+                        <h3 class="card-title">⚙️ Simulador de Diagnóstico Agro-Ambiental</h3>
+                        <p class="card-subtitle">Selecione as práticas atuais da propriedade rústica para analisar o desempenho:</p>
+
+                        <form id="simulador-form" onsubmit="return false;">
+                            <div class="input-block">
+                                <label class="input-label">🌾 1. Manejo do Solo</label>
+                                <select id="solo" class="select-field">
+                                    <option value="alto">Plantio Direto & Rotação de Culturas</option>
+                                    <option value="medio">Cultivo Mínimo com Gradeamento Esporádico</option>
+                                    <option value="baixo">Arado Convencional & Monocultura Contínua</option>
+                                </select>
+                            </div>
+
+                            <div class="input-block">
+                                <label class="input-label">💧 2. Recursos Hídricos (APP)</label>
+                                <select id="agua" class="select-field">
+                                    <option value="alto">Preservação total da Mata Ciliar e Nascentes</option>
+                                    <option value="medio">Acesso controlado do gado aos cursos d'água</option>
+                                    <option value="baixo">Ausência de mata ciliar e degradação de fontes</option>
+                                </select>
+                            </div>
+
+                            <div class="input-block">
+                                <label class="input-label">🧪 3. Manejo de Insumos</label>
+                                <select id="insumos" class="select-field">
+                                    <option value="alto">Tríplice lavagem e devolução correta de embalagens</option>
+                                    <option value="medio">Uso de EPIs mas descarte irregular de sobras</option>
+                                    <option value="baixo">Uso intensivo de defensivos sem critérios técnicos</option>
+                                </select>
+                            </div>
+
+                            <div class="input-block">
+                                <label class="input-label">🐾 4. Biodiversidade & Fauna</label>
+                                <select id="biodiversidade" class="select-field">
+                                    <option value="alto">Manutenção de corredores ecológicos e reserva legal</option>
+                                    <option value="medio">Presença de árvores isoladas nas pastagens</option>
+                                    <option value="baixo">Desmatamento total para expansão da lavoura</option>
+                                </select>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section class="card-base">
+                        <h3 class="card-title">📊 Resultado do Diagnóstico</h3>
+                        <p class="card-subtitle">Métricas calculadas em tempo real com base nas diretrizes do campo:</p>
+
+                        <div class="score-row">
+                            <div>
+                                <span class="score-meta">PONTUAÇÃO GERAL</span>
+                                <div class="score-number"><span id="pontos-valor">--</span><span class="score-base">/100</span></div>
+                            </div>
+                            <span id="status-badge" class="pill-status state-wait">AGUARDANDO SELEÇÃO</span>
+                        </div>
+
+                        <div class="bar-group">
+                            <div class="bar-meta"><span>Práticas de Cultivo</span><span id="pct-cultivo">0%</span></div>
+                            <div class="bar-rail"><div id="bar-cultivo" class="bar-fill"></div></div>
+                        </div>
+
+                        <div class="bar-group">
+                            <div class="bar-meta"><span>Conservação Ambiental</span><span id="pct-ambiental">0%</span></div>
+                            <div class="bar-rail"><div id="bar-ambiental" class="bar-fill"></div></div>
+                        </div>
+
+                        <div class="bar-group">
+                            <div class="bar-meta"><span>Gestão & Sociedade</span><span id="pct-gestao">0%</span></div>
+                            <div class="bar-rail"><div id="bar-gestao" class="bar-fill"></div></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div id="view-agroecologia" class="view-pane">
+                <section class="card-base">
+                    <h3 class="card-title">🌱 Práticas Agroecológicas Coletivas</h3>
+                    <p class="card-subtitle">Os pilares da agricultura sustentável e familiar em Antônio Olinto:</p>
+                    
+                    <div class="agro-grid">
+                        <div class="agro-card">
+                            <h4>🔄 Rotação e Diversificação</h4>
+                            <p>O plantio alternado de diferentes vegetações quebra ciclos reprodutivos biológicos de pragas e enriquece os micronutrientes orgânicos do solo naturalmente.</p>
+                        </div>
+                        <div class="agro-card">
+                            <h4>🌿 Adubação Verde e Palhada</h4>
+                            <p>A utilização de plantas como leguminosas captura e fixa o nitrogênio direto da atmosfera, estruturando o solo vivo e impedindo processos erosivos severos.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="view-licoes" class="view-pane">
+                <div class="grid-quiz-layout">
+                    <section class="card-base">
+                        <div class="quiz-header">
+                            <h3 class="card-title">📚 Quiz Raízes: Lições de Agroecologia</h3>
+                            <span id="quiz-block-indicator" class="quiz-level-indicator">Bloco Ativo: 1 de 3</span>
+                        </div>
+                        <p class="card-subtitle">Responda aos questionários práticos baseados nas diretrizes reais do campo:</p>
+
+                        <div id="quiz-game-container">
+                            <div class="quiz-progress-mini">
+                                <span id="quiz-question-counter">Questão 1 de 10</span>
+                                <span id="quiz-score-live">Acertos no bloco: 0</span>
+                            </div>
+
+                            <div class="quiz-card-box">
+                                <h4 id="quiz-question-text" class="quiz-prompt">Carregando pergunta...</h4>
+                                <div id="quiz-options-box" class="quiz-options-list">
+                                    </div>
+                            </div>
+
+                            <div id="quiz-hint-box" class="quiz-hint-alert hidden"></div>
+
+                            <div class="quiz-controls">
+                                <button id="quiz-btn-prev" class="btn-secondary" onclick="voltarQuestaoQuiz()">⬅ Voltar</button>
+                                <button id="quiz-btn-hint" class="btn-secondary" onclick="toggleDicaQuiz()">💡 Ver Dica</button>
+                                <button id="quiz-btn-next" class="btn-primary" onclick="avancarQuestaoQuiz()">Avançar ➡</button>
+                            </div>
+                        </div>
+
+                        <div id="quiz-result-container" class="quiz-finished-screen hidden">
+                            <div class="finished-status">
+                                <span class="finished-icon">🎉</span>
+                                <h4>Bloco de Lições Concluído!</h4>
+                                <p id="quiz-result-summary">Você acertou X de 10 questões.</p>
+                            </div>
+                            <div class="finished-actions">
+                                <button id="quiz-btn-restart-block" class="btn-secondary" onclick="reiniciarBlocoAtual()">Refazer Bloco Atual</button>
+                                <button id="quiz-btn-next-block" class="btn-primary" onclick="irParaProximoBloco()">Próximo Bloco de Lições 🚀</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card-base">
+                        <h3 class="card-title">📋 Relatório de Rendimento Escolar</h3>
+                        <p class="card-subtitle">Notas salvas localmente no navegador referentes aos blocos avaliados:</p>
+                        
+                        <div class="table-scroller">
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Data/Hora</th>
+                                        <th>Avaliação</th>
+                                        <th>Desempenho</th>
+                                        <th>Situação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="corpo-tabela-relatorios">
+                                    </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div id="view-materiais" class="view-pane">
+                <section class="card-base">
+                    <h3 class="card-title">📂 Biblioteca de Arquivos e Guias Práticos</h3>
+                    <p class="card-subtitle">Acesse de forma direta os manuais técnicos de referência pedagógica:</p>
+                    
+                    <div class="materials-wrapper">
+                        <div class="material-row">
+                            <div class="material-meta">
+                                <span class="mat-icon">📄</span>
+                                <div>
+                                    <h4>Cartilha do Solo Vivo 2026.pdf</h4>
+                                    <p>Manual prático oficial da Embrapa tratando de palhadas protetoras, adubação verde e microorganismos do solo.</p>
+                                </div>
+                            </div>
+                            <a href="https://www.infoteca.cnptia.embrapa.br/bitstream/doc/498802/1/doc90.pdf" target="_blank" class="link-download">Baixar PDF 📥</a>
+                        </div>
+
+                        <div class="material-row">
+                            <div class="material-meta">
+                                <span class="mat-icon">🎥</span>
+                                <div>
+                                    <h4>Videoaula: Recuperação de Minas d'Água</h4>
+                                    <p>Produção audiovisual detalhando o cercamento correto de nascentes rústicas e conservação de APPs.</p>
+                                </div>
+                            </div>
+                            <a href="https://youtube.com/shorts/FHraCDyIhrI?si=nQWpTg8aAR6qLqGH" target="_blank" class="link-watch">Assistir Aula 🔗</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="view-desafios" class="view-pane">
+                <section class="card-base">
+                    <h3 class="card-title">🏆 Missões do Concurso Agrinho 2026</h3>
+                    <p class="card-subtitle">Desafios práticos obrigatórios definidos para nossa turma escolar:</p>
+                    
+                    <ul class="task-list">
+                        <li><strong>Arquitetura Front-End Limpa:</strong> Separação absoluta de estruturas nativas (HTML, CSS, JS) para aprovação em banca avaliadora.</li>
+                        <li><strong>Ação Coletiva Rural:</strong> Apresentação deste simulador computacional para pequenos produtores rurais locais no município.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div id="view-progresso" class="view-pane">
+                <div class="grid-dashboard">
+                    <section class="card-base">
+                        <h3 class="card-title">📈 Conquistas e Gamificação</h3>
+                        <p class="card-subtitle">Acompanhe seu desempenho geral no ecossistema Raízes do Amanhã:</p>
+                        
+                        <div class="gamification-box">
+                            <div class="goal-item" id="node-ch-simulador">
+                                <span class="goal-check">✔</span>
+                                <div>
+                                    <h5>Executar o Simulador Agroecológico</h5>
+                                    <p>Status: <strong id="tag-ch-simulador">Incompleto</strong></p>
+                                </div>
+                            </div>
+                            <div class="goal-item" id="node-ch-quiz">
+                                <span class="goal-check">✔</span>
+                                <div>
+                                    <h5>Gabaritar um Bloco de Questões (10/10)</h5>
+                                    <p>Status: <strong id="tag-ch-quiz">Pendente</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metrics-summary-row">
+                            <div class="summary-tile">
+                                <span>Recorde Simulador</span>
+                                <h4 id="meta-txt-sim">--</h4>
+                            </div>
+                            <div class="summary-tile">
+                                <span>Precisão Respostas</span>
+                                <h4 id="meta-txt-quiz">0%</h4>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card-base">
+                        <h3 class="card-title">🎖️ Galeria de Medalhas Virtuais</h3>
+                        <p class="card-subtitle">Incentivos conquistados conforme seus marcos de pontuação:</p>
+                        
+                        <div class="medal-showcase">
+                            <div class="medal-card" id="med-target-sim">
+                                <span class="medal-icon">🌾</span>
+                                <h5>Mestre do Solo</h5>
+                                <p>Sustentabilidade Máxima alcançada no Simulador.</p>
+                            </div>
+                            <div class="medal-card" id="med-target-quiz">
+                                <span class="medal-icon">🧠</span>
+                                <h5>Cérebro Verde</h5>
+                                <p>Acertou todas as 10 questões de um Bloco.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
